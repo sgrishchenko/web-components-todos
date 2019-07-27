@@ -1,4 +1,4 @@
-import './app/app.js'
+import './app/app.element.js'
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");

@@ -1,16 +1,8 @@
-import '../todoCreator/todoCreator.js'
-import '../todoList/todoList.js'
+import '../todoCreator/todoCreator.element.js'
+import '../todoList/todoList.element.js'
+import {appTemplate} from "./app.template.js";
 
-const appTemplate = document.createElement('template');
-appTemplate.innerHTML = `
-  <div style="width: 300px">
-    <h3>Todos</h3>
-    <x-todo-creator id="todo-creator"></x-todo-creator>
-    <x-todo-list id="todo-list"></x-todo-list>
-  </div>
-`;
-
-class App extends HTMLElement {
+class AppElement extends HTMLElement {
     #currentId = 1;
     #todoCreator;
     #todoList;
@@ -34,10 +26,10 @@ class App extends HTMLElement {
 
     #addTodo = event => {
         const id = this.#generateId();
-        const {name} = event.detail;
+        const {title} = event.detail;
 
         const todoItem = document.createElement('x-todo-item');
-        todoItem.innerHTML = name;
+        todoItem.innerHTML = title;
         todoItem.setAttribute('id', id);
 
         this.#todoList.appendChild(todoItem);
@@ -52,4 +44,4 @@ class App extends HTMLElement {
     }
 }
 
-window.customElements.define('x-app', App);
+window.customElements.define('x-app', AppElement);
