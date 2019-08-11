@@ -1,4 +1,4 @@
-import {todoItemTemplate} from "./todoItem.template.js";
+import {todoItemTemplate} from './todoItem.template.js';
 
 class TodoItemElement extends HTMLElement {
     #completedCheckbox;

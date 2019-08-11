@@ -1,6 +1,6 @@
 import '../todoCreator/todoCreator.element.js'
 import '../todoList/todoList.element.js'
-import {appTemplate} from "./app.template.js";
+import {appTemplate} from './app.template.js';
 
 class AppElement extends HTMLElement {
     #currentId = 1;

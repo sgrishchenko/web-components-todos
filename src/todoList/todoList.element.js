@@ -1,5 +1,5 @@
 import '../todoItem/todoItem.element.js'
-import {todoListTemplate} from "./todoList.template.js";
+import {todoListTemplate} from './todoList.template.js';
 
 class TodoListElement extends HTMLElement {
     constructor() {

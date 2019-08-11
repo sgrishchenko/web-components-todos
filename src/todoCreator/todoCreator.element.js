@@ -1,4 +1,4 @@
-import {todoCreatorTemplate} from "./todoCreator.template.js";
+import {todoCreatorTemplate} from './todoCreator.template.js';
 
 class TodoCreator extends HTMLElement {
     #titleInput;
