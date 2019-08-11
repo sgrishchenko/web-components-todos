@@ -1,6 +1,6 @@
 import {todoCreatorTemplate} from './todoCreator.template.js';
 
-class TodoCreator extends HTMLElement {
+class TodoCreatorElement extends HTMLElement {
     #titleInput;
     #addButton;
 
@@ -29,4 +29,4 @@ class TodoCreator extends HTMLElement {
     }
 }
 
-window.customElements.define('x-todo-creator', TodoCreator);
+window.customElements.define('x-todo-creator', TodoCreatorElement);
