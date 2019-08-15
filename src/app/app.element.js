@@ -18,14 +18,14 @@ class AppElement extends HTMLElement {
         this.#todoCreator = this.shadowRoot.getElementById('todo-creator');
         this.#todoList = this.shadowRoot.getElementById('todo-list');
 
-        this.#todoCreator.addEventListener('addTodo', this.#addTodo);
+        this.#todoCreator.addEventListener('addTodo', this.#onAddTodo);
     }
 
     #generateId = () => {
-        return `todo-item-${this.#currentId++}`
+        return `todo-item-${this.#currentId++}`;
     };
 
-    #addTodo = event => {
+    #onAddTodo = event => {
         const id = this.#generateId();
         const {title} = event.detail;
 
@@ -35,13 +35,12 @@ class AppElement extends HTMLElement {
 
         this.#todoList.appendChild(todoItem);
 
-        todoItem.addEventListener('remove', () => this.#removeTodo(id))
+        todoItem.addEventListener('remove', () => this.#onRemoveTodo(id))
     };
 
-    #removeTodo = id => {
-        this.#todoList.removeChild(
-            this.shadowRoot.getElementById(id)
-        )
+    #onRemoveTodo = id => {
+        const todoItem = this.shadowRoot.getElementById(id);
+        this.#todoList.removeChild(todoItem)
     }
 }
 

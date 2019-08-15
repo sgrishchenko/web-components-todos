@@ -1,4 +1,4 @@
-import {todoItemTemplate} from './todoItem.template.js';
+import {todoItemTemplate} from './todoItem.template.js'
 
 class TodoItemElement extends HTMLElement {
     #completedCheckbox;
@@ -8,8 +8,8 @@ class TodoItemElement extends HTMLElement {
         return this.hasAttribute('completed');
     }
 
-    set completed(val) {
-        if (val) {
+    set completed(value) {
+        if (value) {
             this.setAttribute('completed', '');
         } else {
             this.removeAttribute('completed');
@@ -27,7 +27,7 @@ class TodoItemElement extends HTMLElement {
         this.#removeButton = this.shadowRoot.getElementById('remove-button');
 
         this.#completedCheckbox.addEventListener('change', this.#onCompletedCheckboxChange);
-        this.#removeButton.addEventListener('click', this.#onRemoveButtonClick)
+        this.#removeButton.addEventListener('click', this.#onRemoveButtonClick);
     }
 
     #onCompletedCheckboxChange = () => {
@@ -37,7 +37,7 @@ class TodoItemElement extends HTMLElement {
     #onRemoveButtonClick = () => {
         const event = new Event('remove');
         this.dispatchEvent(event);
-    }
+    };
 }
 
 window.customElements.define('x-todo-item', TodoItemElement);

@@ -1,4 +1,4 @@
-import {todoCreatorTemplate} from './todoCreator.template.js';
+import {todoCreatorTemplate} from './todoCreator.template.js'
 
 class TodoCreatorElement extends HTMLElement {
     #titleInput;
@@ -14,10 +14,10 @@ class TodoCreatorElement extends HTMLElement {
         this.#titleInput = this.shadowRoot.getElementById('title-input');
         this.#addButton = this.shadowRoot.getElementById('add-button');
 
-        this.#addButton.addEventListener('click', this.#onNameButtonClick)
+        this.#addButton.addEventListener('click', this.#onAddButtonClick)
     }
 
-    #onNameButtonClick = () => {
+    #onAddButtonClick = () => {
         const title = this.#titleInput.value.trim();
 
         if (title) {
