@@ -4,7 +4,6 @@ import '../todoItem/todoItem.element.js'
 import {appTemplate} from './app.template.js';
 
 class AppElement extends HTMLElement {
-    #currentId = 1;
     #todoCreator;
     #todoList;
 
@@ -21,12 +20,8 @@ class AppElement extends HTMLElement {
         this.#todoCreator.addEventListener('addTodo', this.#onAddTodo);
     }
 
-    #generateId = () => {
-        return `todo-item-${this.#currentId++}`;
-    };
-
     #onAddTodo = event => {
-        const id = this.#generateId();
+        const id = String(Math.random());
         const {title} = event.detail;
 
         const todoItem = document.createElement('x-todo-item');

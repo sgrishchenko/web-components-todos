@@ -10,7 +10,7 @@ class TodoItemElement extends HTMLElement {
 
     set completed(value) {
         if (value) {
-            this.setAttribute('completed', '');
+            this.setAttribute('completed', 'completed');
         } else {
             this.removeAttribute('completed');
         }
