@@ -16,7 +16,7 @@ appTemplate.innerHTML = `
     #header {
       text-align: center;
       margin: 5px;
-      color: #ffffff;
+      color: white;
     }
   </style>
   

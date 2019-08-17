@@ -12,7 +12,7 @@ todoCreatorTemplate.innerHTML = `
       font-size: 16px;
     }
     #add-button {
-      flex-basis: 35%;
+      flex-basis: 25%;
       color: #505050;
       font-size: 16px;
     }

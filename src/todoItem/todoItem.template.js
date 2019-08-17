@@ -8,11 +8,11 @@ todoItemTemplate.innerHTML = `
     }
     
     :host(:hover) {
-      background-color: #d0d0d0;
+      background-color: lightgray;
     }
     
     :host([completed]) {
-      background-color: #808080;
+      background-color: gray;
     }
     
     #completed-checkbox {
@@ -28,7 +28,7 @@ todoItemTemplate.innerHTML = `
     }
     
     :host([completed]) #title {
-      color: #ffffff;
+      color: white;
       text-decoration: line-through;
     }
     
