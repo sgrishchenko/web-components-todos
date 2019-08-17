@@ -37,7 +37,8 @@ todoItemTemplate.innerHTML = `
       font-size: 18px;
       background: transparent;
       border: none;
-      color: black;
+      color: transparent;  
+      text-shadow: 0 0 0 black;
     }
     
     #remove-button:hover {
