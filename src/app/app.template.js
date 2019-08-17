@@ -4,6 +4,8 @@ appTemplate.innerHTML = `
   <style>
     :host {
       display: block;
+      max-width: 720px;
+      margin: auto;
     }
     
     #header-block {
