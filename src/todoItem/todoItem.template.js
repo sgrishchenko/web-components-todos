@@ -37,10 +37,11 @@ todoItemTemplate.innerHTML = `
       font-size: 18px;
       background: transparent;
       border: none;
+      color: black;
     }
     
     #remove-button:hover {
-      background-color: #f44336;
+      background-color: coral;
     }
   </style>
   

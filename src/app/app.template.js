@@ -7,7 +7,7 @@ appTemplate.innerHTML = `
     }
     
     #header-block {
-      background-color: #f44336;
+      background-color: seagreen;
       padding: 30px 40px;
     }
     
