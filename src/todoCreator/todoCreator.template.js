@@ -7,12 +7,12 @@ todoCreatorTemplate.innerHTML = `
     }
     
     #title-input {
-      flex: 1 75%;
+      flex: 3;
       padding: 10px;
       font-size: 16px;
     }
     #add-button {
-      flex: 1 25%;
+      flex: 1;
       color: #505050;
       font-size: 16px;
     }
